@@ -8,7 +8,7 @@ import Stack from '@mui/material/Stack';
 import Checkbox from '@mui/material/Checkbox';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Select from '@mui/material/Select';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 
@@ -24,15 +24,9 @@ import './App.css';
 */
 
 function App() {
-  const [todoIdCounter, setTodoIdCounter] = useState(0);
+  //const [todoIdCounter, setTodoIdCounter] = useState(0);
   const [inputValue, setInputValue] = useState('');
-  const [todos, setTodos] = useState([
-    {
-      text: 'pese hambad',
-      isChecked: false,
-      id: 0
-    }
-  ]);
+  const [todos, setTodos] = useState([]);
   const [currentView, setView] = useState('all');
 
   const addNewTodo = () => {
