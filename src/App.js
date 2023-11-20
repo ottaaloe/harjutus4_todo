@@ -46,15 +46,15 @@ function App() {
     console.log(todos);
   }
 
-  const deleteToDo = (event) => {
-    console.log('del', event.currentTarget.id)
-    todos.find((obj) => obj['id'] == event.currentTarget.id).isDeleted = true;
+  const deleteToDo = (id) => {
+    console.log('del', id)
+    todos.find((obj) => obj['id'] == id).isDeleted = true;
     refreshList();
   }
 
-  const checkToDo = (event) => {
-
-    todos.find((obj) => obj['id'] == event.target.id).isChecked = (event.target.checked) ? true : false;
+  const toggleToDo = (todo) => {
+    console.log('toddd', todo);
+    todos.find((obj) => obj['id'] == todo.id).isChecked = (todo.isChecked) ? false : true;
     refreshList();
   }
 
@@ -125,7 +125,7 @@ function App() {
           <Stack spacing={2} direction="row">
             <FormControl fullWidth variant="filled" >
               <InputLabel id="demo-simple-select-label">View</InputLabel>
-              <Select 
+              <Select
                 labelId="demo-select-small-label"
                 id="demo-select-small"
                 value={currentView}
@@ -147,8 +147,8 @@ function App() {
             todos.map((todo) => (
               !todo.isDeleted && (currentView == 'all' || (currentView == 'finished' && todo.isChecked) || (currentView == 'unfinished' && !todo.isChecked)) ? (
                 <div key={todo.id}>
-                  <Checkbox id={todo.id} onClick={checkToDo} checked={todo.isChecked} /> {todo.text} 
-                  <IconButton aria-label="delete" id={todo.id} onClick={deleteToDo}>
+                  <Checkbox onClick={() => { toggleToDo(todo) }} checked={todo.isChecked} /> <span style={{'text-decoration': todo.isChecked?'line-through':'none'  }}>{todo.text}</span>
+                  <IconButton aria-label="delete" onClick={() => { deleteToDo(todo.id) }}>
                     <DeleteIcon />
                   </IconButton>
                 </div>
