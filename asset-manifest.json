@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/harjutus4_todo/static/css/main.59202e70.css",
-    "main.js": "/harjutus4_todo/static/js/main.f83a5664.js",
+    "main.js": "/harjutus4_todo/static/js/main.ed5be591.js",
     "static/js/787.875d484f.chunk.js": "/harjutus4_todo/static/js/787.875d484f.chunk.js",
     "index.html": "/harjutus4_todo/index.html",
     "main.59202e70.css.map": "/harjutus4_todo/static/css/main.59202e70.css.map",
-    "main.f83a5664.js.map": "/harjutus4_todo/static/js/main.f83a5664.js.map",
+    "main.ed5be591.js.map": "/harjutus4_todo/static/js/main.ed5be591.js.map",
     "787.875d484f.chunk.js.map": "/harjutus4_todo/static/js/787.875d484f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.59202e70.css",
-    "static/js/main.f83a5664.js"
+    "static/js/main.ed5be591.js"
   ]
 }
